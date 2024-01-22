@@ -6,9 +6,7 @@ export default function AddTodo() {
   const [contents, setContents] = useState('');
   const [id, setId] = useState(0);
   const [data, setData] = useState([
-    {id: 0, title: 'erg', contents: 'ghfg', isDone: false},
-    {id: 1, title: 'title', contents: 'fgh', isDone: true},
-    {id: 2, title: 'tyt', contents: 'drtdr', isDone: false}
+    {id: 0, title: '과제 완료하기', contents: '과제 완료하고 제출하기', isDone: false},
   ]);
 
   const onChangeTitle = (e) => {
@@ -20,12 +18,17 @@ export default function AddTodo() {
   }
 
   const addItem = () => {
-    let newData = {id: id, title: title, contents: contents, isDone: false}
-    // data.push(newData);
+    let newId = id;
+    if(data.length > 0){
+      newId = data[data.length-1].id + 1;
+    }else{
+      newId = newId + 1;
+    }
+    let newData = {id: newId, title: title, contents: contents, isDone: false}
     setData([...data, newData]);
     setTitle('');
     setContents('');
-    setId(id + 1);
+    setId(newId);
   }
   
   return (
