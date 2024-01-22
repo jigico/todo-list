@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+.layout-1200 {
+  margin:0 auto;
+  min-width: 800px;
+  max-width: 1200px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  padding:15px;
+  font-weight: bold;
+  font-size: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input{
+  margin:0 5px;
+  padding:5px;
+  height: 20px;
+  border-radius: 5px;
+  border:1px solid #ddd
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* btn 공통 */
+button[class^='btn-']{
+  padding:4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-blue{
+  color:#fff;
+  background-color: #0B60B0;
+  border:1px solid #0B60B0;
+}
+.btn-red{
+  color:#ff0000;
+  background-color: #fff;
+  border:2px solid #ff0000;
+}
+.btn-green{
+  color:#0d7403;
+  background-color: #fff;
+  border:2px solid #0d7403;
+}
+
+.add-todo-area{
+  padding:15px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: right;
 }
-
-.App-link {
-  color: #61dafb;
+.add-todo-area label{
+  display: inline-flex;
+  align-items: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.item{
+  margin:10px 5px;
+  padding:15px;
+  display: inline-block;
+  width:calc(50% - 10px);
+  border:1px solid #ddd;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.title{
+  font-weight: bold;
+}
+.contents{
+  margin-top: 5px;
+  font-size: 14px;
+}
+.btn-box{
+  display: flex;
+  margin-top: 10px;
+}
+.btn-box .btn-red,
+.btn-box .btn-green{
+  width: 100%;
+}
+.btn-box .btn-green{
+  margin-left: 10px;
 }
