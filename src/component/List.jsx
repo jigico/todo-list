@@ -50,11 +50,12 @@ export default function List({data}) {
     return function(e){
       const parent = e.target.parentElement.parentElement;
       const id = parent.querySelector('.target-id').value;
-      console.log(id)
-      let filterData = data.filter((el) => {
-        return el.id !== Number(id);
+      console.log(data)
+      let findIdx = data.findIndex((el) => { //삭제할 아이템의 index를 구하고
+        return el.id === Number(id);
       });
-      setCurrData([...filterData]);
+      let newData = data.splice(findIdx,1); //splice로 삭제한다.
+      setCurrData(newData); //업데이트를 해준다.
     }
   }
 
