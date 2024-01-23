@@ -4,8 +4,12 @@
 - react를 활용한 나만의 todo list 구현
 - url : https://todo-list-six-chi-85.vercel.app/
 
+<br />
+
 ## 개발 기간
 2024.01.22 - 2024.01.23 (2일)
+
+<br />
 
 ## 프로젝트 요구사항 및 기능
 - todo list 항목 추가 기능
@@ -16,7 +20,12 @@
 - layout의 최대 넓이는 1200px, 최소 넓이는 800px 제한
 - 컴포넌트 구조는 자유롭게 구현 및 분리한 컴포넌트 기재
 
+<br />
 
+## 프로젝트 미리보기
+![프로젝트 소개](./src/assets/projectView.gif)
+
+<br />
 
 ## 컴포넌트 분리
 - Item.jsx : todo list 의 항목이 되는 컴포넌트를 분리
@@ -193,6 +202,7 @@ export default function AddTodo() {
 
 ```
 
+<br />
 
 ## 프로젝트 구조
 ```
