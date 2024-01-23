@@ -4,9 +4,9 @@ import List from './List';
 export default function AddTodo() {
   const [title, setTitle] = useState('');
   const [contents, setContents] = useState('');
-  const [id, setId] = useState(0);
+  const [id, setId] = useState('');
   const [data, setData] = useState([
-    {id: 0, title: '과제 완료하기', contents: '과제 완료하고 제출하기', isDone: false},
+    // {id: 0, title: '과제 완료하기', contents: '과제 완료하고 제출하기', isDone: false},
   ]);
 
   const onChangeTitle = (e) => {
@@ -29,12 +29,7 @@ export default function AddTodo() {
       return;
     }
 
-    let newId = id;
-    if(data.length > 0){
-      newId = data[data.length-1].id + 1;
-    }else{
-      newId = newId + 1;
-    }
+    let newId = crypto.randomUUID();
     let newData = {id: newId, title: title, contents: contents, isDone: false}
     setData([...data, newData]);
     setTitle('');
