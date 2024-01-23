@@ -22,10 +22,10 @@ export default function List({data}) {
       const id = parent.querySelector('.target-id').value; //찾은 조상 요소의 자식중에 id 값을 가지고 있는 input 의 value 를 가져온다.
       
       let findData = data.find((el) => { //현재 데이터와 같은 id를 가진 데이터를 가져온다.
-        return el.id === Number(id); //id 가 string 으로 가져와져서 number로 형변환.
+        return el.id === id; //id 가 string 으로 가져와져서 number로 형변환.
       });
       findData.isDone = true; //상태를 완료로 변경한다.
-      setCurrData([findData]); //업데이트를 해준다.
+      setCurrData((prevData) => [findData, ...prevData]); //업데이트를 해준다.
     }
   }
 
@@ -37,10 +37,10 @@ export default function List({data}) {
       const id = parent.querySelector('.target-id').value;
       
       let findData = data.find((el) => {
-        return el.id === Number(id);
+        return el.id === id;
       });
       findData.isDone = false;
-      setCurrData([findData]);
+      setCurrData((prevData) => [findData, ...prevData]);
       console.log(findData);
     }
   }
@@ -52,7 +52,7 @@ export default function List({data}) {
       const id = parent.querySelector('.target-id').value;
       console.log(data)
       let findIdx = data.findIndex((el) => { //삭제할 아이템의 index를 구하고
-        return el.id === Number(id);
+        return el.id === id;
       });
       let newData = data.splice(findIdx,1); //splice로 삭제한다.
       setCurrData(newData); //업데이트를 해준다.
