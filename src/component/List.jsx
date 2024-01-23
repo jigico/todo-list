@@ -61,7 +61,7 @@ export default function List({data}) {
 
   return (
     <>
-      <h2>Working</h2>
+      <h2 className='page-title'>🔥 Working</h2>
       <ul className='todo-list'>
         {
           incompleteData.map((el) => {
@@ -69,7 +69,7 @@ export default function List({data}) {
           })
         }
       </ul>
-      <h2>Done</h2>
+      <h2 className='page-title'>🎉 Done</h2>
       <ul className='todo-list'>
       {
         completeData.map((el) => {

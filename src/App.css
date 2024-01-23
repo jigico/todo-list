@@ -48,12 +48,19 @@ button[class^='btn-']{
   justify-content: right;
 }
 .add-todo-area label{
+  margin-right: 10px;
   display: inline-flex;
   align-items: center;
+}
+.page-title{
+  font-size: 20px;
+  font-weight: bold;
 }
 .todo-list{
   display: flex;
   flex-wrap: wrap;
+  align-items: start;
+  min-height: 150px;
 }
 .item{
   margin:10px 5px;
