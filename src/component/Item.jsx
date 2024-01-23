@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Item({id, title, contents, isDone, completeItem, cancelItem, deleteItem}) {
   return (
-    <li className='item'>
+    <li className={isDone === true ? 'item done' : 'item'}>
       <span className='title'>{title}</span>
       <p className='contents'>{contents}</p>
       <input type='hidden' className='target-id' value={id} />

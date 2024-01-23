@@ -32,12 +32,12 @@ button[class^='btn-']{
 }
 .btn-red{
   color:#ff0000;
-  background-color: #fff;
+  background-color: transparent;
   border:2px solid #ff0000;
 }
 .btn-green{
   color:#0d7403;
-  background-color: #fff;
+  background-color: transparent;
   border:2px solid #0d7403;
 }
 
@@ -71,12 +71,21 @@ button[class^='btn-']{
   border-radius: 10px;
   box-sizing: border-box;
 }
+.item.done{
+  background: #f7f7f7;
+}
 .title{
   font-weight: bold;
+  color:#000;
 }
 .contents{
   margin-top: 5px;
   font-size: 14px;
+  color:#000;
+}
+.done .title,
+.done .contents{
+  color:#999
 }
 .btn-box{
   display: flex;
